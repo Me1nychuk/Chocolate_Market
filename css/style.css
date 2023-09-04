@@ -1,0 +1,124 @@
+:root {
+  --c-brand: #fd9222;
+  --c-primary: #111;
+  --c-primary-light: #fff;
+  --c-primary-light-tr: #ffffffb2;
+  --c-background: #1e1823;
+  --c-background-light: #fafafa;
+}
+body {
+  color: var(--c-primary);
+  font-family: "Montserrat", sans-serif;
+  background: var(--c-background-light);
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+button {
+  font-family: inherit;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* header */
+.logo {
+  color: var(--c-primary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.logo-span {
+  font-style: italic;
+}
+.nav-link {
+  color: var(--c-primary);
+  font-weight: 500;
+  line-height: 1.14em; /* 114.286% */
+  letter-spacing: -0.02em;
+}
+.nav-link:hover {
+  color: var(--c-brand);
+}
+/* end header */
+
+/* hero-section */
+.hero-section {
+  background-color: var(--c-background); /* TODO: replace with image */
+}
+.hero-title {
+  color: var(--c-primary-light);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21em; /* 121.429% */
+  letter-spacing: -0.03em;
+}
+.button-primary {
+  color: var(--c-primary-light);
+  background-color: var(--c-brand);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  padding: 14px 40px;
+  border-radius: 100px;
+  line-height: 1.21;
+}
+.button-primary:hover {
+  color: var(--c-brand);
+  background-color: #fcf1e0;
+}
+.hero-button {
+  color: var(--c-primary-light);
+  border: 1px solid currentColor;
+  padding: 14px 40px;
+  border-radius: 100px;
+  font-weight: 600;
+  line-height: 1.21;
+}
+.hero-button:hover {
+  color: var(--c-brand);
+}
+.hero-scroll-down {
+  color: var(--c-primary-light);
+  font-weight: 500;
+  line-height: 1.28; /* 128.571% */
+  letter-spacing: -0.03em;
+}
+.hero-scroll-down:hover {
+  color: var(--c-brand);
+}
+/* end hero-section */
+
+/* advantage-section */
+.advantage-section {
+  background-color: var(--c-background);
+}
+.advantage-title {
+  color: var(--c-primary-light);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.22;
+}
+
+.advantage-text {
+  color: var(--c-primary-light-tr);
+  font-weight: 400;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+}
+/* end advantage-section */
