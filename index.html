@@ -535,17 +535,123 @@
     <!-- Form -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close" type="button" data-modal-close>X</button>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
-          corporis totam fugiat voluptas placeat ab maiores tenetur dicta
-          nostrum vitae?
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
-          corporis totam fugiat voluptas placeat ab maiores tenetur dicta
-          nostrum vitae?
-        </p>
+        <button class="modal-close" type="button" data-modal-close>
+          <svg class="modal-close-icon" width="24" height="24">
+            <use href="./images/form-icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h2 class="section-title">
+          <span class="section-title-brand">buy</span> now
+        </h2>
+        <form name="contact-form" autocomplete="off">
+          <fieldset>
+            <legend class="modal-label">Personal information</legend>
+
+            <div class="modal-field">
+              <label class="visually-hidden" for="user-name">Name</label>
+              <input
+                class="modal-input"
+                id="user-name"
+                name="user-name"
+                type="text"
+                placeholder="Name"
+                required
+              />
+            </div>
+
+            <div class="modal-field">
+              <label class="visually-hidden" for="user-surname">Surname</label>
+              <input
+                class="modal-input"
+                id="user-surname"
+                name="user-surname"
+                type="text"
+                placeholder="Surname"
+                required
+              />
+            </div>
+
+            <div class="modal-field">
+              <label class="modal-label" for="user-email">Email</label>
+              <input
+                class="modal-input"
+                id="user-email"
+                name="user-email"
+                type="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="modal-field">
+              <label class="modal-label" for="user-tel">Phone number</label>
+
+              <div class="modal-input-wrap">
+                <input
+                  class="modal-input modal-input-phone"
+                  id="user-tel"
+                  name="user-tel"
+                  type="tel"
+                  placeholder="Phone number"
+                  required
+                />
+
+                <svg class="modal-input-icon" width="32" height="32">
+                  <use href="./images/form-icons.svg#icon-ukraine"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="modal-field">
+              <label class="modal-label" for="user-card-number"
+                >Card number</label
+              >
+              <input
+                class="modal-input"
+                id="user-card-number"
+                name="user-card-number"
+                type="tel"
+                placeholder="Enter card"
+                required
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="visually-hidden">Additional information</legend>
+            <label class="modal-label" for="user-comment">Comment</label>
+            <textarea
+              class="modal-textarea"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Enter text"
+            ></textarea>
+          </fieldset>
+
+          <div class="modal-checkbox">
+            <input
+              class="modal-checkbox-input visually-hidden"
+              id="privacy-policy"
+              name="privacy-policy"
+              type="checkbox"
+              required
+            />
+
+            <span class="modal-checkbox-check">
+              <svg class="modal-checkbox-icon" width="12" height="12">
+                <use href="./images/form-icons.svg#icon-mark"></use>
+              </svg>
+            </span>
+
+            <label class="modal-checkbox-label" for="privacy-policy">
+              I agree with
+              <a class="privacy-policy-link" href="#">Privacy policy</a></label
+            >
+          </div>
+
+          <button class="modal-button button-primary" type="submit">
+            Submit
+          </button>
+        </form>
       </div>
     </div>
 
