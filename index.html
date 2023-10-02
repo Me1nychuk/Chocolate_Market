@@ -59,6 +59,11 @@
               </svg>
             </a>
           </div>
+          <button class="header-menu-btn menu-toggle">
+            <svg class="menu-toggle-icon" width="32" height="32">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -72,10 +77,12 @@
               moment of pure delight!
             </h1>
             <div class="hero-actions">
-              <button class="button-primary" type="button" data-modal-open>
-                Buy now
-              </button>
-              <a class="hero-button" href="#">How it’s made</a>
+              <div class="hero-btns">
+                <button class="button-primary" type="button" data-modal-open>
+                  Buy now
+                </button>
+                <a class="hero-button" href="#">How it’s made</a>
+              </div>
               <a class="hero-arrow" href="#advantage-section">
                 scroll down
                 <div class="hero-arrow-link">
@@ -162,11 +169,28 @@
             <li class="ingridients-item">
               <div class="ingridient">
                 <div class="ingridient-photo">
-                  <img
-                    src="./images/ingridients/milk-chocolate.webp"
-                    alt="Milk chocolate"
-                    width="206"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width: 1199px )"
+                      srcset="
+                        images/ingridients/milk-chocolate-mob.png    1x,
+                        images/ingridients/milk-chocolate-mob@2x.png 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        images/ingridients/milk-chocolate-desk.png    1x,
+                        images/ingridients/milk-chocolate-desk@2x.png 2x
+                      "
+                    />
+                    <img
+                      src=".images/ingridients/milk-chocolate-mob.png"
+                      alt="Milk chocolate"
+                      width="224"
+                    />
+                  </picture>
+
                   <h3 class="ingridient-title">Milk chocolate</h3>
                   <div class="ingridients-overlay">
                     <h3 class="ingridients-overlay-title">Milk chocolate</h3>
@@ -189,11 +213,28 @@
             <li class="ingridients-item">
               <div class="ingridient">
                 <div class="ingridient-photo">
-                  <img
-                    src="./images/ingridients/milk.webp"
-                    alt="Milk"
-                    width="206"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width: 1199px )"
+                      srcset="
+                        images/ingridients/milk-mob.png    1x,
+                        images/ingridients/milk-mob@2x.png 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        images/ingridients/milk-desk.png    1x,
+                        images/ingridients/milk-desk@2x.png 2x
+                      "
+                    />
+                    <img
+                      src="./images/ingridients/milk-mob.png"
+                      alt="Milk"
+                      width="224"
+                    />
+                  </picture>
+
                   <h3 class="ingridient-title">Milk</h3>
                   <div class="ingridients-overlay">
                     <h3 class="ingridients-overlay-title">Milk</h3>
@@ -216,11 +257,28 @@
             <li class="ingridients-item">
               <div class="ingridient">
                 <div class="ingridient-photo">
-                  <img
-                    src="./images/ingridients/nuts.webp"
-                    alt="Nuts"
-                    width="206"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width: 1199px )"
+                      srcset="
+                        images/ingridients/nuts-mob.png    1x,
+                        images/ingridients/nuts-mob@2x.png 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        images/ingridients/nuts-desk.png    1x,
+                        images/ingridients/nuts-desk@2x.png 2x
+                      "
+                    />
+                    <img
+                      src="./images/ingridients/nuts-mob.png"
+                      alt="Nuts"
+                      width="224"
+                    />
+                  </picture>
+
                   <h3 class="ingridient-title">Nuts</h3>
                   <div class="ingridients-overlay">
                     <h3 class="ingridients-overlay-title">nuts</h3>
@@ -243,11 +301,28 @@
             <li class="ingridients-item">
               <div class="ingridient">
                 <div class="ingridient-photo">
-                  <img
-                    src="./images/ingridients/semi-chocolate.webp"
-                    alt="Semi chocolate"
-                    width="206"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width: 1199px )"
+                      srcset="
+                        images/ingridients/semi-chocolate-mob.png    1x,
+                        images/ingridients/semi-chocolate-mob@2x.png 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px )"
+                      srcset="
+                        images/ingridients/semi-chocolate-desk.png    1x,
+                        images/ingridients/semi-chocolate-desk@2x.png 2x
+                      "
+                    />
+                    <img
+                      src="./images/ingridients/semi-chocolate-mob.png"
+                      alt="Semi chocolate"
+                      width="224"
+                    />
+                  </picture>
+
                   <h3 class="ingridient-title">Semi chocolate</h3>
                   <div class="ingridients-overlay">
                     <h3 class="ingridients-overlay-title">
@@ -281,13 +356,36 @@
           </h2>
           <div class="video-inner">
             <div class="video-media">
-              <!-- placeholder for video. TODO: replace with video -->
-              <img
-                class="video-background"
-                src="./images/video-bg.jpg"
-                alt="Video background"
-                width="600"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767.98px )"
+                  srcset="
+                    ./images/video-bg-mob.png    1x,
+                    ./images/video-bg-mob@2x.png 2x
+                  "
+                />
+                <source
+                  media="(min-width: 769px )"
+                  srcset="
+                    ./images/video-bg-tab.png    1x,
+                    ./images/video-bg-tab@2x.png 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200px )"
+                  srcset="
+                    ./images/video-bg-desk.png    1x,
+                    ./images/video-bg-desk@2x.png 2x
+                  "
+                />
+                <img
+                  class="video-background"
+                  src="./images/video-bg-mob.png "
+                  alt="Video background"
+                  width="335"
+                />
+              </picture>
+
               <button class="video-play" type="button">
                 <svg width="32" height="32">
                   <use href="./images/icons.svg#icon-play"></use>
@@ -336,11 +434,15 @@
               <article class="product">
                 <div class="product-image">
                   <img
-                    class="product-photo"
-                    src="./images/products/orange.png"
-                    alt="orange-chocolate"
+                    srcset="
+                      ./images/products/orange-desk.png    1x,
+                      ./images/products/orange-desk@2x.png 2x
+                    "
+                    src="./images/products/orange-desk.png"
+                    alt="Semi chocolate"
                     width="230"
                   />
+
                   <div class="product-overlay">
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -358,7 +460,11 @@
                 <div class="product-image">
                   <img
                     class="product-photo"
-                    src="./images/products/apple_cranberry.png"
+                    srcset="
+                      ./images/products/apple_cranberry-desk.png    1x,
+                      ./images/products/apple_cranberry-desk@2x.png 2x
+                    "
+                    src="./images/products/apple_cranberry-desk.png"
                     alt="orange-chocolate"
                     width="230"
                   />
@@ -379,7 +485,11 @@
                 <div class="product-image">
                   <img
                     class="product-photo"
-                    src="./images/products/lime_sea_salt.png"
+                    srcset="
+                      ./images/products/lime_sea_salt-desk.png    1x,
+                      ./images/products/lime_sea_salt-desk@2x.png 2x
+                    "
+                    src="./images/products/lime_sea_salt-desk.png"
                     alt="orange-chocolate"
                     width="230"
                   />
@@ -400,7 +510,11 @@
                 <div class="product-image">
                   <img
                     class="product-photo"
-                    src="./images/products/pineapple.png"
+                    srcset="
+                      ./images/products/pineapple-desk.png    1x,
+                      ./images/products/pineapple-desk@2x.png 2x
+                    "
+                    src="./images/products/pineapple-desk.png"
                     alt="orange-chocolate"
                     width="230"
                   />
@@ -429,29 +543,84 @@
           <ul class="sellers-list">
             <li class="sellers-item">
               <div class="seller">
-                <img
-                  class="seller-photo"
-                  src="./images/sellers/chocolate_1.jpg"
-                  alt="chocolate_1"
-                />
+                <picture>
+                  <source
+                    media="(max-width:767.98px )"
+                    srcset="
+                      ./images/sellers/chocolate_1-mob.png    1x,
+                      ./images/sellers/chocolate_1-mob@2x.png 2x
+                    "
+                  />
+                  <source
+                    media="(min-width:768px )"
+                    srcset="
+                      ./images/sellers/chocolate_1-tab.png    1x,
+                      ./images/sellers/chocolate_1-tab@2x.png 2x
+                    "
+                  />
+                  <source
+                    media="(min-width:1200px )"
+                    srcset="
+                      ./images/sellers/chocolate_1-desk.png    1x,
+                      ./images/sellers/chocolate_1-desk@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="seller-photo"
+                    src="./images/sellers/chocolate_1-mob.png "
+                    alt="chocolate_1"
+                  />
+                </picture>
               </div>
             </li>
             <li class="sellers-item">
               <div class="seller">
-                <img
-                  class="seller-photo"
-                  src="./images/sellers/chocolate_2.jpg"
-                  alt="chocolate_2"
-                />
+                <picture>
+                  <source
+                    media="(max-width:767.98px )"
+                    srcset="
+                      ./images/sellers/chocolate_2-mob.png    1x,
+                      ./images/sellers/chocolate_2-mob@2x.png 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px )"
+                    srcset="
+                      ./images/sellers/chocolate_2-tab.png    1x,
+                      ./images/sellers/chocolate_2-tab@2x.png 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1200px )"
+                    srcset="
+                      ./images/sellers/chocolate_2-desk.png    1x,
+                      ./images/sellers/chocolate_2-desk@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="seller-photo"
+                    src="./images/sellers/chocolate_2-mob.png "
+                    alt="chocolate_2"
+                  />
+                </picture>
               </div>
             </li>
             <li class="sellers-item">
               <div class="seller">
-                <img
-                  class="seller-photo"
-                  src="./images/sellers/chocolate_3.jpg"
-                  alt="chocolate_3"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px )"
+                    srcset="
+                      ./images/sellers/chocolate_3-desk.png    1x,
+                      ./images/sellers/chocolate_3-desk@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="seller-photo"
+                    src="./images/sellers/chocolate_3-desk.png "
+                    alt="chocolate_3"
+                  />
+                </picture>
               </div>
             </li>
           </ul>
