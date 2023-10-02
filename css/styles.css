@@ -316,14 +316,12 @@ fieldset {
 
 .advantage-list {
   display: flex;
-  gap: 70px;
+  flex-direction: column;
+  gap: 20px;
 }
-
-.advantage-item:not(:last-child) {
-  position: relative;
-  padding-right: 18px;
+.advantage-item {
+  flex-basis: 100%;
 }
-
 .advantage-icon {
   display: flex;
   justify-content: center;
@@ -800,6 +798,17 @@ fieldset {
   .button-primary {
     padding: 14px 40px;
   }
+
+  .advantage-list {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .advantage-item {
+    flex-basis: calc((100% - 60px) / 2);
+  }
 }
 @media only screen and (min-width: 1200px) {
   .container {
@@ -829,6 +838,10 @@ fieldset {
   .header-menu-btn {
     display: none;
   }
+  .advantage-item:not(:last-child) {
+    position: relative;
+    padding-right: 18px;
+  }
   .advantage-item:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -839,5 +852,12 @@ fieldset {
     background-color: var(--c-primary-light-tr);
     transform: rotate(-90deg) translateX(50%);
     transform-origin: 100% 0;
+  }
+  .advantage-list {
+    gap: 70px;
+  }
+
+  .advantage-item {
+    flex-basis: calc((100% - 140px) / 3);
   }
 }
