@@ -352,9 +352,11 @@ fieldset {
 
 /* Ingridients sections */
 .ingridients-block-center {
-  width: 40%;
+  width: 100%;
+  max-width: 375px;
   margin: auto;
 }
+
 .ingridients-subtitle {
   text-align: center;
   margin-bottom: 50px;
@@ -362,12 +364,12 @@ fieldset {
 
 .ingridients-list {
   display: flex;
+  flex-direction: column;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .ingridients-item {
-  flex-basis: calc((100% - 60px) / 4);
+  flex-basis: 100%;
 }
 .ingridients-item:first-child .ingridient {
   background-color: var(--c-brand);
@@ -385,7 +387,7 @@ fieldset {
   overflow: hidden;
   border: 1px solid var(--c-brand);
   border-radius: 15px;
-  padding: 28px 36px 28px 28px;
+  padding: 28px 55px;
 }
 .ingridient-title {
   margin-top: 36px;
@@ -447,22 +449,35 @@ fieldset {
 /* Video section */
 .video-inner {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
 .video-media {
-  flex-basis: calc((100% - 20px) / 2);
+  flex-basis: 100%;
+  position: relative;
 }
 
 .video-background {
   border-radius: 15px;
   object-fit: cover;
   height: 100%;
+  width: 100%;
 }
-
 .video-play {
-  /* TODO: center play button in video */
-  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  fill: #111;
 }
 
 .video-content {
@@ -500,10 +515,14 @@ fieldset {
 .products-list {
   display: flex;
   gap: 18px;
+  justify-content: center;
 }
 
+.products-item:not(:first-child) {
+  display: none;
+}
 .products-item {
-  width: calc((100%-54) / 4);
+  flex-basis: 100%;
 }
 
 .product {
@@ -517,6 +536,9 @@ fieldset {
 .product-image {
   position: relative;
   overflow: hidden;
+}
+.product-image img {
+  width: 100%;
 }
 
 .product-overlay {
@@ -573,21 +595,42 @@ fieldset {
   display: flex;
   gap: 16px;
   margin-bottom: 32px;
+  flex-direction: column;
+}
+.not-mob-list-seller {
+  display: none;
 }
 
 .sellers-item {
-  width: calc((100%-38) / 3);
+  width: 100%;
+}
+.seller {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.seller .button-primary {
+  width: 162px;
+}
+.sellers-item img {
   border-radius: 15px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .seller-description {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
-
+.seller-description.first {
+  display: none;
+}
 .seller-text {
-  width: calc(100% / 2.85);
+  width: 100%;
+  /* width: calc(100% / 2.85); */
 }
 
 /* END Sellers section */
@@ -809,6 +852,62 @@ fieldset {
   .advantage-item {
     flex-basis: calc((100% - 60px) / 2);
   }
+  .ingridients-block-center {
+    max-width: 468px;
+  }
+  .ingridients-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+  }
+
+  .ingridients-item {
+    flex-basis: calc((100% - 32px) / 2);
+  }
+
+  .products-item:nth-child(2) {
+    display: block;
+  }
+
+  .products-item {
+    flex-basis: calc((100% - 36px) / 3);
+  }
+
+  .sellers-list.mob-list-seller {
+    display: none;
+  }
+  .not-mob-list-seller {
+    display: block;
+  }
+  .sellers-list {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-direction: row;
+  }
+  .seller-description {
+    flex-direction: row;
+  }
+  .seller .button-primary {
+    width: 162px;
+  }
+  .seller-text {
+    flex-basis: calc(100% / 2.85);
+  }
+  .sellers-item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+  .sellers-item:last-child {
+    display: none;
+  }
+  .seller {
+    display: block;
+  }
+  .seller-description.first {
+    display: flex;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .container {
@@ -859,5 +958,35 @@ fieldset {
 
   .advantage-item {
     flex-basis: calc((100% - 140px) / 3);
+  }
+
+  .ingridients-list {
+    gap: 19px;
+    flex-wrap: nowrap;
+  }
+  .ingridients-item {
+    flex-basis: calc((100% - 57px) / 4);
+  }
+  .ingridient {
+    padding: 28px 36px 28px 28px;
+  }
+
+  .video-inner {
+    flex-direction: row;
+  }
+
+  .products-item:not(:first-child) {
+    display: block;
+  }
+
+  .products-item {
+    flex-basis: calc((100% - 54px) / 4);
+  }
+
+  .sellers-item:last-child {
+    display: block;
+  }
+  .sellers-item {
+    flex-basis: calc((100% - 32px) / 3);
   }
 }

@@ -365,19 +365,20 @@
                   "
                 />
                 <source
-                  media="(min-width: 769px )"
-                  srcset="
-                    ./images/video-bg-tab.png    1x,
-                    ./images/video-bg-tab@2x.png 2x
-                  "
-                />
-                <source
                   media="(min-width: 1200px )"
                   srcset="
                     ./images/video-bg-desk.png    1x,
                     ./images/video-bg-desk@2x.png 2x
                   "
                 />
+                <source
+                  media="(min-width: 769px )"
+                  srcset="
+                    ./images/video-bg-tab.png    1x,
+                    ./images/video-bg-tab@2x.png 2x
+                  "
+                />
+
                 <img
                   class="video-background"
                   src="./images/video-bg-mob.png "
@@ -387,7 +388,7 @@
               </picture>
 
               <button class="video-play" type="button">
-                <svg width="32" height="32">
+                <svg class="video-play-icon" width="35" height="35">
                   <use href="./images/icons.svg#icon-play"></use>
                 </svg>
               </button>
@@ -540,31 +541,32 @@
           <h2 class="section-title">
             <span class="section-title-brand">tOp</span> Sellers
           </h2>
-          <ul class="sellers-list">
+          <ul class="sellers-list not-mob-list-seller">
             <li class="sellers-item">
               <div class="seller">
                 <picture>
                   <source
-                    media="(max-width:767.98px )"
+                    media="(max-width:767.98px)"
                     srcset="
                       ./images/sellers/chocolate_1-mob.png    1x,
                       ./images/sellers/chocolate_1-mob@2x.png 2x
                     "
                   />
                   <source
-                    media="(min-width:768px )"
-                    srcset="
-                      ./images/sellers/chocolate_1-tab.png    1x,
-                      ./images/sellers/chocolate_1-tab@2x.png 2x
-                    "
-                  />
-                  <source
-                    media="(min-width:1200px )"
+                    media="(min-width:1200px)"
                     srcset="
                       ./images/sellers/chocolate_1-desk.png    1x,
                       ./images/sellers/chocolate_1-desk@2x.png 2x
                     "
                   />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/sellers/chocolate_1-tab.png    1x,
+                      ./images/sellers/chocolate_1-tab@2x.png 2x
+                    "
+                  />
+
                   <img
                     class="seller-photo"
                     src="./images/sellers/chocolate_1-mob.png "
@@ -584,19 +586,20 @@
                     "
                   />
                   <source
-                    media="(min-width: 768px )"
-                    srcset="
-                      ./images/sellers/chocolate_2-tab.png    1x,
-                      ./images/sellers/chocolate_2-tab@2x.png 2x
-                    "
-                  />
-                  <source
                     media="(min-width: 1200px )"
                     srcset="
                       ./images/sellers/chocolate_2-desk.png    1x,
                       ./images/sellers/chocolate_2-desk@2x.png 2x
                     "
                   />
+                  <source
+                    media="(min-width: 768px )"
+                    srcset="
+                      ./images/sellers/chocolate_2-tab.png    1x,
+                      ./images/sellers/chocolate_2-tab@2x.png 2x
+                    "
+                  />
+
                   <img
                     class="seller-photo"
                     src="./images/sellers/chocolate_2-mob.png "
@@ -624,7 +627,7 @@
               </div>
             </li>
           </ul>
-          <div class="seller-description">
+          <div class="seller-description first">
             <p class="seller-text">
               Crazy enough chocolate originates from a bean just like the coffee
               bean called Cacao. Cacao has been around for thousands of years
@@ -635,6 +638,59 @@
               Buy now
             </button>
           </div>
+
+          <!-- -mob -->
+          <ul class="sellers-list mob-list-seller">
+            <li class="sellers-item">
+              <div class="seller">
+                <picture>
+                  <source
+                    media="(max-width:767.98px )"
+                    srcset="
+                      ./images/sellers/chocolate_1-mob.png    1x,
+                      ./images/sellers/chocolate_1-mob@2x.png 2x
+                    "
+                  />
+
+                  <img
+                    class="seller-photo"
+                    src="./images/sellers/chocolate_1-mob.png "
+                    alt="chocolate_1"
+                  />
+                </picture>
+                <div class="seller-description">
+                  <p class="seller-text">
+                    Crazy enough chocolate originates from a bean just like the
+                    coffee bean called Cacao. Cacao has been around for
+                    thousands of years and was first discovered by the Native
+                    American tribe called the Mayans.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="sellers-item">
+              <div class="seller">
+                <picture>
+                  <source
+                    media="(max-width:767.98px )"
+                    srcset="
+                      ./images/sellers/chocolate_2-mob.png    1x,
+                      ./images/sellers/chocolate_2-mob@2x.png 2x
+                    "
+                  />
+
+                  <img
+                    class="seller-photo"
+                    src="./images/sellers/chocolate_2-mob.png "
+                    alt="chocolate_2"
+                  />
+                </picture>
+                <button class="button-primary" type="button" data-modal-open>
+                  Buy now
+                </button>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
