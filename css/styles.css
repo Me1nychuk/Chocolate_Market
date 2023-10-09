@@ -832,6 +832,58 @@ fieldset {
 }
 /* END Footer */
 
+/* Menu */
+.menu {
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 50%;
+  background: var(--c-background);
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: opacity 100ms ease-in-out, visibility 150ms ease-in-out,
+    transform 150ms ease-in-out;
+}
+
+.menu.is-hidden {
+  transform: translateX(100%);
+}
+.menu .modal-close {
+  fill: #fafafa;
+}
+.menu-list {
+  margin-top: 156px;
+  margin-left: 85px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.menu-link,
+.menu-link:visited {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  transition: color 0.3s;
+}
+.menu-link:hover {
+  color: var(--c-brand);
+}
+
+.menu-icons {
+  position: absolute;
+  left: 32px;
+  bottom: 24px;
+  display: flex;
+  gap: 18px;
+}
+
+/* END Menu */
+
 /* Form */
 .backdrop {
   position: fixed;

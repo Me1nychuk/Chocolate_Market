@@ -59,7 +59,7 @@
               </svg>
             </a>
           </div>
-          <button class="header-menu-btn menu-toggle">
+          <button class="header-menu-btn menu-toggle" data-menu-open>
             <svg class="menu-toggle-icon" width="32" height="32">
               <use href="./images/icons.svg#icon-menu"></use>
             </svg>
@@ -771,6 +771,7 @@
         </div>
       </section>
     </main>
+    <!-- Footer -->
     <footer>
       <section class="section footer">
         <div class="container">
@@ -822,13 +823,51 @@
                 <a class="footer-link" href="#">Top sellers</a>
               </li>
               <li>
-                <a class="footer-link" href="#">Chocolate is loved</a>
+                <a class="footer-link" href="#">Chocsolate is loved</a>
               </li>
             </ul>
           </div>
         </div>
       </section>
     </footer>
+
+    <!-- Menu window -->
+    <div class="menu" data-menu>
+      <button class="modal-close" type="button" data-menu-close>
+        <svg class="modal-close-icon" width="24" height="24">
+          <use href="./images/form-icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <ul class="menu-list">
+        <li class="menu-list-item">
+          <a class="menu-link" href="#">Home</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-link" href="#">How it’s made?</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-link" href="#">Our products</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-link" href="#">Top sellers</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-link" href="#">Chocsolate is loved</a>
+        </li>
+      </ul>
+      <div class="menu-icons">
+        <a class="footer-socials-link" href="#" target="_blank">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a class="footer-socials-link" href="#" target="_blank">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
 
     <!-- Form -->
     <div class="backdrop is-hidden" data-modal>
